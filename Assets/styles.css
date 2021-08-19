@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+html {
+    --text-color: #757575;
+    --title-color: #313131;
+    --main-blue: #083C47;
+    --blue50: #00AFD7;
+    --blue100: #093C48;
+    --light-grey: #F6F6F6;
+
+    --playfair: 'Playfair Display', serif;
+    --lato: 'Lato', sans-serif;
+
+    --base-unit: 8px;
+    --navbar-height: calc(var(--base-unit) * 8);
+    --transition: all .2s ease-in-out;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: var(--navbar-height);
+    margin: 0;
+    font-size: 16px;
+    color: var(--text-color);
+    font-family: var(--lato);
+}
+
+h1, h2, h3 {
+    font-family: var(--playfair);
+    font-weight: 700;
+    color: var(--title-color);
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0 0 calc(var(--base-unit) * 5) 0;
+}
+
+h2 {
+    font-size: 32px;
+    margin: 0 0 calc(var(--base-unit) * 3) 0;
+}
+
+h3 {
+    font-size: 1.3em;
+    margin: 0 0 calc(var(--base-unit) * 2);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: var(--base-unit);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+
+}
+@media screen and (max-width: 599px) {
+    .col-xs {
+        flex-direction: column;
+    }
+}
+
+.sp-btw {
+    justify-content: space-between;
+  }
+
+.jst-ctr {
+    justify-content: center;
+}
+
+.aln-ctr {
+    align-items: center;
+}
+
+.aln-bsl {
+    align-items: baseline;
+}
+
+.txt-aln-ctr {
+    text-align: center;
+}
+
+.hover:hover {
+    cursor: pointer;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.full-w {
+    width: 100%;
+}
+
+@media screen and (max-width: 599px) {
+    .full-w-xs {
+        width: 100% !important;
+    }
+}
+
+.w-f-content {
+    width: fit-content;
+}
+
+.kill-margin {
+    margin: 0;
+}
+
+.margin-auto {
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 599px) {
+    .margin-auto-xs {
+        margin: 0 auto;
+    }
+}
+
+.margin-bottom {
+    margin-bottom: var(--base-unit);
+}
+
+.margin-right {
+    margin-right: var(--base-unit);
+}
+
+.margin-bottom-2 {
+    margin-bottom: calc(var(--base-unit) * 2);
+}
+
+.margin-bottom-3 {
+    margin-bottom: calc(var(--base-unit) * 3);
+}
+
+.margin-bottom-5 {
+    margin-bottom: calc(var(--base-unit) * 5);
+}
+
+.margin-bottom-10 {
+    margin-bottom: calc(var(--base-unit) * 10);
+}
+
+.margin-bottom-20 {
+    margin-bottom: calc(var(--base-unit) * 20);
+}
+
+.padding {
+    margin-bottom: var(--base-unit);
+}
+
+.padding-2 {
+    padding: calc(var(--base-unit) * 2);
+}
+
+.padding-3 {
+    padding: calc(var(--base-unit) * 3);
+}
+
+.padding-4 {
+    padding: calc(var(--base-unit) * 3);
+}
+
+.padding-w-2 {
+    padding: 0 calc(var(--base-unit) * 2);
+}
+
+.padding-w-4 {
+    padding: 0 calc(var(--base-unit) * 4);
+}
+
+.link {
+    color: #667EEA;
+    transition: var(--transition);
+}
+
+link:hover {
+    cursor: pointer;
+    color: #5468c0;
+}
+
+#top {
+    margin-top: calc(var(--navbar-height) * -1);
+    margin-bottom: var(--navbar-height);
+}
+
+.navbar {
+    background-color: var(--blue100);
+    height: var(--navbar-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 4px 6px #0000002f;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    height: var(--navbar-height);
+}
+
+.navbar > .nav-txt > a{
+    color: white;
+}
+
+.ab-fold-image {
+    height: calc(100vh - var(--navbar-height));
+    width: 50vw;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 599px) {
+    .ab-fold-image {
+        height: 30vh;
+        width: 100%;
+    }
+}
+
+.ab-fold-txt {
+    margin-top: calc(var(--base-unit) * -3);
+}
+
+.ab-fold-txt h1 .last {
+    position: relative;
+}
+
+.ab-fold-txt h1 .last:after {
+    content : '';
+    position: absolute;
+    bottom: var(--base-unit);
+    right: calc(var(--base-unit) * -2);
+    height: var(--base-unit);
+    width: var(--base-unit);
+    background: var(--blue50);
+    border-radius: 50%;
+
+}
+
+@media screen and (max-width: 599px) {
+    .ab-fold-txt {
+        margin-top: calc(var(--base-unit) * 4);
+    }
+}
+
+.cta {
+    display: block;
+    width: fit-content;
+    height: calc(var(--base-unit) * 3);
+    line-height: calc(var(--base-unit) * 3);
+    padding: calc(var(--base-unit) * 2) calc(var(--base-unit) * 6);
+    background: var(--blue100);
+    font-family: var(--playfair);
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+
+.blue-dot {
+    height: var(--base-unit);
+    width: var(--base-unit);
+    background: var(--blue50);
+    border-radius: 50%;
+}
+
+.layout {
+    padding: 0 10%;
+}
+
+.comp-card {
+    width: 30%;
+}
+
+@media screen and (max-width: 599px) {
+    .comp-card {
+        margin-bottom: calc(var(--base-unit) * 7);
+    }
+}
+
+.comp-card > img {
+    width: 100%;
+    height: calc(var(--base-unit) * 20);
+    object-fit: cover;
+}
+
+.break-image {
+    margin-right: calc(1vw * -15);
+    width: calc(100vw - (1vw * 15));
+    height: 40vh;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+}
+
+.break-image-follow {
+    margin-top: -10vh;
+    background-color: white;
+    padding: calc(var(--base-unit) * 10);
+}
+
+@media screen and (max-width: 599px) {
+    .break-image-follow {
+        padding: calc(var(--base-unit) * 2);
+    }
+}
+
+.money-card {
+    width: 45%;
+}
+
+.money-card-img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+}
+
+.money-card-txt {
+    background-color: white;
+    margin-top: -10vh;
+}
+
+@media screen and (max-width: 599px) {
+    .money-card-txt {
+        padding: calc(var(--base-unit) * 2);
+    }
+}
+
+.profile-container {
+    height: calc(var(--base-unit) * 20);
+    width: calc(var(--base-unit) * 20);
+    border: 1px solid #B9B9B9;
+    position: relative;
+    border-radius: 50%;
+}
+
+.profile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: calc(var(--base-unit) * 19);
+    width: calc(var(--base-unit) * 19);
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.footer {
+    background-color: var(--light-grey);
+}
+
+.footer > img {
+    width: 25%;
+    margin-right: calc(var(--base-unit) * 4);
+}
+
+.footer p {
+    opacity: .6;
+}
