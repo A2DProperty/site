@@ -12,7 +12,7 @@ html {
     --lato: 'Lato', sans-serif;
 
     --base-unit: 8px;
-    --navbar-height: calc(var(--base-unit) * 8);
+    --navbar-height: calc(var(--base-unit) * 10);
     --transition: all .2s ease-in-out;
 
     scroll-behavior: smooth;
@@ -263,13 +263,6 @@ link:hover {
     font-weight: 700;
     color: white;
     text-align: center;
-}
-
-.blue-dot {
-    height: var(--base-unit);
-    width: var(--base-unit);
-    background: var(--blue50);
-    border-radius: 50%;
 }
 
 .layout {
