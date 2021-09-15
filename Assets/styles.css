@@ -230,21 +230,6 @@ link:hover {
     margin-top: calc(var(--base-unit) * -3);
 }
 
-.ab-fold-txt h1 .last {
-    position: relative;
-}
-
-.ab-fold-txt h1 .last:after {
-    content : '';
-    position: absolute;
-    bottom: var(--base-unit);
-    right: calc(var(--base-unit) * -2);
-    height: var(--base-unit);
-    width: var(--base-unit);
-    background: var(--blue50);
-    border-radius: 50%;
-
-}
 
 @media screen and (max-width: 599px) {
     .ab-fold-txt {
@@ -357,6 +342,7 @@ link:hover {
     margin-right: calc(var(--base-unit) * 4);
 }
 
-.footer p {
-    opacity: .6;
+.footer p:not(.italic) {
+    color: var(--title-color);
+    font-size: 20px;
 }
